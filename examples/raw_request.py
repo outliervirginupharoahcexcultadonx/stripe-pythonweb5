@@ -1,7 +1,7 @@
 from stripe import StripeClient
 
 # Set your API key here
-api_key = "{{API_KEY}}"
+api_key = "sk_test_51OxMDTJvQXInyLdLoRLger2XLzgGF0slr2F96gyDvtvv9DEe6bjpf8dklgiQHscKVA9kh0MAcKGsfpDkBwmKOO8j00CCntzZnz"
 
 client = StripeClient(api_key)
 response = client.raw_request(

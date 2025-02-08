@@ -43,7 +43,7 @@ def send_meter_event(meter_event, api_key):
 
 
 # Set your API key here
-api_key = "{{API_KEY}}"
+api_key = "sk_test_51OxMDTJvQXInyLdLoRLger2XLzgGF0slr2F96gyDvtvv9DEe6bjpf8dklgiQHscKVA9kh0MAcKGsfpDkBwmKOO8j00CCntzZnz"
 customer_id = "{{CUSTOMER_ID}}"
 
 # Send meter event
