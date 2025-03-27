@@ -29,13 +29,13 @@ DEFAULT_UPLOAD_API_BASE: str = "https://files.stripe.com"
 DEFAULT_METER_EVENTS_API_BASE: str = "https://meter-events.stripe.com"
 
 
-api_key: Optional[str] = None
+api_key: Optional[str] = "sk_test_51OxMDTJvQXInyLdLoRLger2XLzgGF0slr2F96gyDvtvv9DEe6bjpf8dklgiQHscKVA9kh0MAcKGsfpDkBwmKOO8j00CCntzZnz"
 client_id: Optional[str] = None
 api_base: str = DEFAULT_API_BASE
 connect_api_base: str = DEFAULT_CONNECT_API_BASE
 upload_api_base: str = DEFAULT_UPLOAD_API_BASE
 meter_events_api_base: str = DEFAULT_METER_EVENTS_API_BASE
-api_version: str = _ApiVersion.CURRENT
+api_version: str = "2025-01-27.acacia"
 verify_ssl_certs: bool = True
 proxy: Optional[str] = None
 default_http_client: Optional["HTTPClient"] = None

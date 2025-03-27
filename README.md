@@ -50,7 +50,7 @@ value:
 ```python
 from stripe import StripeClient
 
-client = StripeClient("sk_test_...")
+client = StripeClient("sk_test_51OxMDTJvQXInyLdLoRLger2XLzgGF0slr2F96gyDvtvv9DEe6bjpf8dklgiQHscKVA9kh0MAcKGsfpDkBwmKOO8j00CCntzZnz")
 
 # list customers
 customers = client.customers.list()
@@ -82,14 +82,14 @@ or as a [connected account](https://stripe.com/docs/connect/authentication#authe
 ```python
 from stripe import StripeClient
 
-client = StripeClient("sk_test_...")
+client = StripeClient("sk_test_51OxMDTJvQXInyLdLoRLger2XLzgGF0slr2F96gyDvtvv9DEe6bjpf8dklgiQHscKVA9kh0MAcKGsfpDkBwmKOO8j00CCntzZnz")
 
 # list customers
 client.customers.list(
     options={
-        "api_key": "sk_test_...",
+        "api_key": "sk_test_51OxMDTJvQXInyLdLoRLger2XLzgGF0slr2F96gyDvtvv9DEe6bjpf8dklgiQHscKVA9kh0MAcKGsfpDkBwmKOO8j00CCntzZnz",
         "stripe_account": "acct_...",
-        "stripe_version": "2019-02-19",
+        "stripe_version": "2025-01-27.acacia",
     }
 )
 
@@ -97,9 +97,9 @@ client.customers.list(
 client.customers.retrieve(
     "cus_123456789",
     options={
-        "api_key": "sk_test_...",
+        "api_key": "sk_test_51OxMDTJvQXInyLdLoRLger2XLzgGF0slr2F96gyDvtvv9DEe6bjpf8dklgiQHscKVA9kh0MAcKGsfpDkBwmKOO8j00CCntzZnz",
         "stripe_account": "acct_...",
-        "stripe_version": "2019-02-19",
+        "stripe_version": "2025-01-27.acacia",
     }
 )
 ```
@@ -110,10 +110,10 @@ You can configure your `StripeClient` to use `urlfetch`, `requests`, `pycurl`, o
 `urllib2` with the `http_client` option:
 
 ```python
-client = StripeClient("sk_test_...", http_client=stripe.UrlFetchClient())
-client = StripeClient("sk_test_...", http_client=stripe.RequestsClient())
-client = StripeClient("sk_test_...", http_client=stripe.PycurlClient())
-client = StripeClient("sk_test_...", http_client=stripe.Urllib2Client())
+client = StripeClient("sk_test_51OxMDTJvQXInyLdLoRLger2XLzgGF0slr2F96gyDvtvv9DEe6bjpf8dklgiQHscKVA9kh0MAcKGsfpDkBwmKOO8j00CCntzZnz", http_client=stripe.UrlFetchClient())
+client = StripeClient("sk_test_51OxMDTJvQXInyLdLoRLger2XLzgGF0slr2F96gyDvtvv9DEe6bjpf8dklgiQHscKVA9kh0MAcKGsfpDkBwmKOO8j00CCntzZnz", http_client=stripe.RequestsClient())
+client = StripeClient("sk_test_51OxMDTJvQXInyLdLoRLger2XLzgGF0slr2F96gyDvtvv9DEe6bjpf8dklgiQHscKVA9kh0MAcKGsfpDkBwmKOO8j00CCntzZnz", http_client=stripe.PycurlClient())
+client = StripeClient("sk_test_51OxMDTJvQXInyLdLoRLger2XLzgGF0slr2F96gyDvtvv9DEe6bjpf8dklgiQHscKVA9kh0MAcKGsfpDkBwmKOO8j00CCntzZnz", http_client=stripe.Urllib2Client())
 ```
 
 Without a configured client, by default the library will attempt to load
@@ -125,7 +125,7 @@ as a last resort). We usually recommend that people use `requests`.
 A proxy can be configured with the `proxy` client option:
 
 ```python
-client = StripeClient("sk_test_...", proxy="https://user:pass@example.com:1234")
+client = StripeClient("sk_test_51OxMDTJvQXInyLdLoRLger2XLzgGF0slr2F96gyDvtvv9DEe6bjpf8dklgiQHscKVA9kh0MAcKGsfpDkBwmKOO8j00CCntzZnz", proxy="https://user:pass@example.com:1234")
 ```
 
 ### Configuring Automatic Retries
@@ -134,7 +134,7 @@ You can enable automatic retries on requests that fail due to a transient
 problem by configuring the maximum number of retries:
 
 ```python
-client = StripeClient("sk_test_...", max_network_retries=2)
+client = StripeClient("sk_test_51OxMDTJvQXInyLdLoRLger2XLzgGF0slr2F96gyDvtvv9DEe6bjpf8dklgiQHscKVA9kh0MAcKGsfpDkBwmKOO8j00CCntzZnz", max_network_retries=2)
 ```
 
 Various errors can trigger a retry, like a connection error or a timeout, and
@@ -268,7 +268,7 @@ stripe.add_beta_version("feature_beta", "v3")
 If you would like to send a request to an undocumented API (for example you are in a private beta), or if you prefer to bypass the method definitions in the library and specify your request details directly, you can use the `raw_request` method on `StripeClient`.
 
 ```python
-client = StripeClient("sk_test_...")
+client = StripeClient("sk_test_51OxMDTJvQXInyLdLoRLger2XLzgGF0slr2F96gyDvtvv9DEe6bjpf8dklgiQHscKVA9kh0MAcKGsfpDkBwmKOO8j00CCntzZnz")
 response = client.raw_request(
     "post", "/v1/beta_endpoint", param=123, stripe_version="2022-11-15; feature_beta=v3"
 )
@@ -284,11 +284,11 @@ with `_async`.
 
 ```python
 # With StripeClient
-client = StripeClient("sk_test_...")
+client = StripeClient("sk_test_51OxMDTJvQXInyLdLoRLger2XLzgGF0slr2F96gyDvtvv9DEe6bjpf8dklgiQHscKVA9kh0MAcKGsfpDkBwmKOO8j00CCntzZnz")
 customer = await client.customers.retrieve_async("cus_xyz")
 
 # With global client
-stripe.api_key = "sk_test_..."
+stripe.api_key = "sk_test_51OxMDTJvQXInyLdLoRLger2XLzgGF0slr2F96gyDvtvv9DEe6bjpf8dklgiQHscKVA9kh0MAcKGsfpDkBwmKOO8j00CCntzZnz"
 customer = await stripe.Customer.retrieve_async("cus_xyz")
 
 # .auto_paging_iter() implements both AsyncIterable and Iterable
@@ -317,7 +317,7 @@ my_http_client = stripe.HTTPXClient(allow_sync_methods=True)
 my_http_client = stripe.AIOHTTPClient()
 
 # With StripeClient
-client = StripeClient("sk_test_...", http_client=my_http_client)
+client = StripeClient("sk_test_51OxMDTJvQXInyLdLoRLger2XLzgGF0slr2F96gyDvtvv9DEe6bjpf8dklgiQHscKVA9kh0MAcKGsfpDkBwmKOO8j00CCntzZnz", http_client=my_http_client)
 
 # With the global client
 stripe.default_http_client = my_http_client
